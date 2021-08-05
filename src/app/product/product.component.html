@@ -1,0 +1,14 @@
+<!-- <ul>
+    <li *ngFor="let product of products ">
+        {{product.shop_name}}
+    </li>
+</ul> -->
+
+<div class="card mycard" >
+    <img src="..." class="card-img-top" alt="...">
+    <div (click)="onSelect(product)"  *ngFor="let product of products " class="card-body">
+      <h5 class="card-title"> {{product.id}}</h5>
+      <p class="card-text"> {{product.shop_name}}</p>
+      <a href="#" class="btn btn-primary">{{product.address}}</a>
+    </div>
+  </div>
