@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CustumerService } from '../custumer.service';
 
 @Component({
   selector: 'app-custumer',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custumer.component.css']
 })
 export class CustumerComponent implements OnInit {
+  constructor(private router :Router,private service:CustumerService){
+
+
+  }
   custumers = [{ "id": 1, "first_name": "Florida", "last_name": "Bowerbank", "email": "fbowerbank0@behance.net" },
   { "id": 2, "first_name": "Ramsey", "last_name": "Thurlborn", "email": "rthurlborn1@icq.com" },
   { "id": 3, "first_name": "Ernst", "last_name": "Broadley", "email": "ebroadley2@furl.net" },
@@ -106,9 +112,15 @@ export class CustumerComponent implements OnInit {
   { "id": 98, "first_name": "Adrea", "last_name": "Lorenzin", "email": "alorenzin2p@printfriendly.com" },
   { "id": 99, "first_name": "Whit", "last_name": "Riccardelli", "email": "wriccardelli2q@fastcompany.com" },
   { "id": 100, "first_name": "Cthrine", "last_name": "Hegel", "email": "chegel2r@cmu.edu" }]
-  constructor() { }
+
 
   ngOnInit(): void {
+  }
+  onSelect(cust){
+   this.router.navigate(['cust',cust.id])
+   this.service.setCustData(cust)
+
+
   }
 
 }

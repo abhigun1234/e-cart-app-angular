@@ -10,7 +10,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import {FormsModule} from '@angular/forms';
 import { CustumerComponent } from './custumer/custumer.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustumerDetailsComponent } from './custumer-details/custumer-details.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ProductComponent,
     ProductDetailsComponent,
     CustumerComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CustumerDetailsComponent
   ],
   imports: [
     BrowserModule,
